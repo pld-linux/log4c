@@ -1,0 +1,41 @@
+diff -Nur log4c-1.0.10.orig/doc/Doxyfile.in log4c-1.0.10.chng/doc/Doxyfile.in
+--- log4c-1.0.10.orig/doc/Doxyfile.in	Wed May  1 18:50:48 2002
++++ log4c-1.0.10.chng/doc/Doxyfile.in	Tue Jul 29 13:57:47 2003
+@@ -98,7 +98,7 @@
+ #---------------------------------------------------------------------------
+ # configuration options related to the LaTeX output
+ #---------------------------------------------------------------------------
+-GENERATE_LATEX         = YES
++GENERATE_LATEX         = NO
+ LATEX_OUTPUT           = latex
+ COMPACT_LATEX          = YES
+ PAPER_TYPE             = a4wide
+diff -Nur log4c-1.0.10.orig/doc/Makefile.am log4c-1.0.10.chng/doc/Makefile.am
+--- log4c-1.0.10.orig/doc/Makefile.am	Wed Apr 10 11:55:37 2002
++++ log4c-1.0.10.chng/doc/Makefile.am	Tue Jul 29 14:04:07 2003
+@@ -5,16 +5,11 @@
+ 	$(top_srcdir)/AUTHORS \
+ 	$(top_srcdir)/NEWS \
+ 	$(top_srcdir)/COPYING \
+-	$(top_srcdir)/ChangeLog \
+-	$(PACKAGE).pdf
++	$(top_srcdir)/ChangeLog 
+ 
+ 
+-all-local: $(PACKAGE).pdf
+-
+-$(PACKAGE).pdf: Doxyfile main.doc
++all-local: Doxyfile main.doc
+ 	@DOXYGEN@
+-	$(MAKE) -C ./latex pdf
+-	cp -f ./latex/refman.pdf $(PACKAGE).pdf
+ 
+ install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(man3dir)
+@@ -41,5 +36,5 @@
+ 	rm -rf $(docdir)/*
+ 
+ clean-local:
+-	$(RM) -r latex man html $(PACKAGE).pdf doxygen.log
++	$(RM) -r latex man html doxygen.log
+ 
