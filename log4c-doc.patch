@@ -1,0 +1,38 @@
+diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
+--- log4c-1.0.10.orig/doc/main.doc.in	Thu Nov 21 16:43:29 2002
++++ log4c-1.0.10.chng/doc/main.doc.in	Mon Aug  4 12:40:23 2003
+@@ -123,24 +123,25 @@
+ @subsection conf_syntax Configuration syntax
+ 
+ The @c log4crc configuration file uses an XML syntax. The root element is
+-@c <log4c> and it can be used to control the configuration file version
++@c &lt;log4c&gt; and it can be used to control the configuration file version
+ interface with the attribute @c "version". The following 4 elements are
+-supported: @c <config>, @c <category>, @c <appender> and @c <layout>.
++supported: @c &lt;config&gt;, @c &lt;category&gt;, @c &lt;appender&gt; and 
++@c &lt;layout&gt;.
+ 
+-@li The @c <config> element controls the global log4c configuration. It has
+-3 sub elements. The @c <nocleanup> flag inhibits the log4c destructors
+-routines. The @c <bufsize> element sets the buffer size used to format
++@li The @c &lt;config&gt; element controls the global log4c configuration. It has
++3 sub elements. The @c &lt;nocleanup&gt; flag inhibits the log4c destructors
++routines. The @c &lt;bufsize&gt; element sets the buffer size used to format
+ log4c_logging_event_t objects. If is set to 0, the allocation is
+-dynamic (the @c <debug> element is currently unused).
++dynamic (the @c &lt;debug&gt; element is currently unused).
+ 
+-@li The @c <category> element has 3 possible attributes: the category @c
++@li The @c &lt;category&gt; element has 3 possible attributes: the category @c
+ "name", the category @c "priority" and the category @c "appender". Future
+ versions will handle multple appenders per category.
+ 
+-@li The @c <appender> element has 3 possible attributes: the appender @c
++@li The @c &lt;appender&gt; element has 3 possible attributes: the appender @c
+ "name", the appender @c "type", and the appender @c "layout".
+ 
+-@li The @c <layout> element has 2 possible attributes: the layout @c "name" and
++@li The @c &lt;layout&gt; element has 2 possible attributes: the layout @c "name" and
+ the layout @c "type".
+ 
+ Here's the default @c log4crc configuration file:
