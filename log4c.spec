@@ -71,6 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 	docdir=/removeit 
 	
 rm -rf $RPM_BUILD_ROOT/removeit
+rm -rf $RPM_BUILD_ROOT/%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,9 +81,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog NEWS README log4crc.sample
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_sysconfdir}/log4crc.sample
 
 %files devel
 %defattr(644,root,root,755)
