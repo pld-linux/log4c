@@ -1,7 +1,7 @@
 diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
 --- log4c-1.0.10.orig/doc/main.doc.in	Thu Nov 21 16:43:29 2002
-+++ log4c-1.0.10.chng/doc/main.doc.in	Mon Aug  4 12:40:23 2003
-@@ -123,24 +123,25 @@
++++ log4c-1.0.10.chng/doc/main.doc.in	Mon Aug  4 12:53:16 2003
+@@ -123,29 +123,30 @@
  @subsection conf_syntax Configuration syntax
  
  The @c log4crc configuration file uses an XML syntax. The root element is
@@ -36,3 +36,9 @@ diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
  the layout @c "type".
  
  Here's the default @c log4crc configuration file:
+ 
+-@include log4crc
++@include ../log4crc.sample
+ 
+ This initial version of the log4c configuration file syntax is quite
+ different from log4j. XML seemed the best choice to keep the log4j
