@@ -1,12 +1,12 @@
 Summary:	Library for flexible logging
 Summary(pl):	Biblioteka do elastycznego logowania
 Name:		log4c
-Version:	1.0.10
+Version:	1.0.11
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
 Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	db901a69a6da4f1974bf47105a9aac8a
+# Source0-md5:	bbb0bb81840470743432b09911dd11a5
 Patch0:		%{name}-nolatex.patch
 Patch1:		%{name}-destdir.patch
 Patch2:		%{name}-doc.patch
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Library for flexible logging.
 
 %description -l pl
-Biblioteka do elastycznego logowania
+Biblioteka do elastycznego logowania.
 
 %package devel
 Summary:	Header files for log4c
@@ -59,9 +59,9 @@ Ten pakiet zawiera statyczn± bibliotekê log4c.
 rm -f missing
 %{__libtoolize}
 %{__aclocal}
-%{__automake}
 %{__autoconf}
 %{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
