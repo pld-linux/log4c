@@ -9,6 +9,7 @@ Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	db901a69a6da4f1974bf47105a9aac8a
 Patch0:		%{name}-nolatex.patch
 Patch1:		%{name}-destdir.patch
+Patch2:		%{name}-doc.patch
 URL:		http://log4cpp.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -52,6 +53,7 @@ Ten pakiet zawiera statyczn± bibliotekê log4c.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
