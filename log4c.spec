@@ -5,7 +5,7 @@ Version:	1.0.11
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
-Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	bbb0bb81840470743432b09911dd11a5
 Patch0:		%{name}-nolatex.patch
 Patch1:		%{name}-destdir.patch
