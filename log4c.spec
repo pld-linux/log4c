@@ -71,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 	docdir=/removeit 
 	
 rm -rf $RPM_BUILD_ROOT/removeit
-rm -rf $RPM_BUILD_ROOT/%{_sysconfdir}
+rm -rf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
