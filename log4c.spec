@@ -5,11 +5,11 @@ Version:	1.0.12
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/log4c/%{name}-%{version}.tar.gz
 # Source0-md5:	334d38ed163b26b1be48364b445ad170
 Patch0:		%{name}-nolatex.patch
 Patch1:		%{name}-doc.patch
-URL:		http://log4cpp.sf.net/
+URL:		http://log4cpp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	doxygen
