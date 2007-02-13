@@ -1,5 +1,5 @@
 Summary:	Library for flexible logging
-Summary(pl.UTF-8):   Biblioteka do elastycznego logowania
+Summary(pl.UTF-8):	Biblioteka do elastycznego logowania
 Name:		log4c
 Version:	1.0.12
 Release:	1
@@ -26,7 +26,7 @@ Biblioteka do elastycznego logowania.
 
 %package devel
 Summary:	Header files for log4c
-Summary(pl.UTF-8):   Pliki nagłówkowe log4c
+Summary(pl.UTF-8):	Pliki nagłówkowe log4c
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki log4c.
 
 %package static
 Summary:	Static log4c library
-Summary(pl.UTF-8):   Statyczna biblioteka log4c
+Summary(pl.UTF-8):	Statyczna biblioteka log4c
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
