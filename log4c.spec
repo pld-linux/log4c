@@ -1,14 +1,16 @@
 Summary:	Library for flexible logging
 Summary(pl.UTF-8):	Biblioteka do elastycznego logowania
 Name:		log4c
-Version:	1.0.12
+Version:	1.2.1
 Release:	1
 License:	LGPL
 Group:		Development/Libraries
 Source0:	http://dl.sourceforge.net/log4c/%{name}-%{version}.tar.gz
-# Source0-md5:	334d38ed163b26b1be48364b445ad170
+# Source0-md5:	ca5412b7515d8901714ab7892323adb6
 Patch0:		%{name}-nolatex.patch
 Patch1:		%{name}-doc.patch
+Patch2:		%{name}-cxx.patch
+Patch3:		%{name}-m4.patch
 URL:		http://log4cpp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,13 +52,15 @@ Ten pakiet zawiera statyczną bibliotekę log4c.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0
 %patch1 -p1
+%patch2
+%patch3
 
 %build
 rm -f missing
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -Iconfig
 %{__autoconf}
 %{__autoheader}
 %{__automake}
