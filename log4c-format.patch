@@ -1,0 +1,11 @@
+--- log4c-1.2.4/examples/helloworld1/mylog.h.orig	2006-11-12 01:34:18.000000000 +0100
++++ log4c-1.2.4/examples/helloworld1/mylog.h	2018-06-30 08:31:50.956649220 +0200
+@@ -39,7 +39,7 @@
+ 
+ static LOG4C_INLINE void mylog_msg(char *catName,int a_priority, char *msg){
+ #ifndef WITHOUT_LOG4C
+-	log4c_category_log(log4c_category_get(catName), a_priority, msg);
++	log4c_category_log(log4c_category_get(catName), a_priority, "%s", msg);
+ #else
+ 	printf(msg);
+ #endif

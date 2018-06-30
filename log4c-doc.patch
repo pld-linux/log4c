@@ -1,7 +1,6 @@
-diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
---- log4c-1.0.10.orig/doc/main.doc.in	Thu Nov 21 16:43:29 2002
-+++ log4c-1.0.10.chng/doc/main.doc.in	Mon Aug  4 12:53:16 2003
-@@ -123,29 +123,30 @@
+--- log4c-1.2.4/doc/main.doc.in.orig	2018-06-30 08:14:13.679994625 +0200
++++ log4c-1.2.4/doc/main.doc.in	2018-06-30 08:28:28.526651532 +0200
+@@ -105,29 +105,29 @@
  @subsection conf_syntax Configuration syntax
  
  The @c log4crc configuration file uses an XML syntax. The root element is
@@ -9,8 +8,7 @@ diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
 +@c &lt;log4c&gt; and it can be used to control the configuration file version
  interface with the attribute @c "version". The following 4 elements are
 -supported: @c <config>, @c <category>, @c <appender> and @c <layout>.
-+supported: @c &lt;config&gt;, @c &lt;category&gt;, @c &lt;appender&gt; and 
-+@c &lt;layout&gt;.
++supported: @c &lt;config&gt;, @c &lt;category&gt;, @c &lt;appender&gt; and @c &lt;layout&gt;.
  
 -@li The @c <config> element controls the global log4c configuration. It has
 -3 sub elements. The @c <nocleanup> flag inhibits the log4c destructors
@@ -25,7 +23,7 @@ diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
 -@li The @c <category> element has 3 possible attributes: the category @c
 +@li The @c &lt;category&gt; element has 3 possible attributes: the category @c
  "name", the category @c "priority" and the category @c "appender". Future
- versions will handle multple appenders per category.
+ versions will handle multiple appenders per category.
  
 -@li The @c <appender> element has 3 possible attributes: the appender @c
 +@li The @c &lt;appender&gt; element has 3 possible attributes: the appender @c
@@ -35,9 +33,9 @@ diff -Nur log4c-1.0.10.orig/doc/main.doc.in log4c-1.0.10.chng/doc/main.doc.in
 +@li The @c &lt;layout&gt; element has 2 possible attributes: the layout @c "name" and
  the layout @c "type".
  
- Here's the default @c log4crc configuration file:
+ Here's the @c log4crc configuration file example:
  
--@include log4crc
+-@include log4crc.sample
 +@include ../log4crc.sample
  
  This initial version of the log4c configuration file syntax is quite
